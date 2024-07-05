@@ -1,0 +1,116 @@
+.splashBackgroundImage{
+    height: 850px;
+    width: 1535px;
+    position: absolute;
+    opacity: 0.35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    z-index: -1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: black, transparent;
+}
+.splashbegin{
+    position: relative;
+}
+
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navLogo{
+    height: 90px;
+    width: 100px;
+    cursor: pointer;
+    margin-left: 70px;
+    margin-top: 14px;
+}
+
+.theContent{
+    text-align: center;
+    
+}
+
+
+.theContent h1{
+    font-size: 90px;
+    color: rgb(10, 10, 70);
+    font-weight: 600;
+    transition: 0.5s;
+    margin-left: 300px;
+    font-family: Baskerville;
+    position: absolute;
+    top: 20px;
+    
+
+}
+
+.websiteMission{
+
+    font-family: Futura;
+    font-size: 20px;
+    color: black;
+    margin-top: 150px;
+}
+
+.theContent {
+    
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    padding: 14px 70px;
+}
+
+.teamBox{
+
+    border: 3px solid gray;
+    border-radius: 20px;
+    width: fit-content;
+    margin-left: 550px;
+    margin-top: 50px;
+    box-shadow: 0 40px 80px #757676;
+    animation: flip 3s forwards;
+}
+
+
+@keyframes flip {
+    from {
+        transform: perspective(400px) rotateY(0);
+    }
+    to {
+        transform: perspective(400px) rotateY(360deg);
+    }
+}
+
+.heading{
+    margin-top: -70px;
+    color: black;
+    font-family: Geneva;
+}
+.ourName h3{
+    margin-top: 40px;
+    font-family:  Geneva;
+ 
+}
+.name-container .ourName  h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 20px;
+}
+

@@ -1,0 +1,286 @@
+:root{
+    --bg: #222831;
+    --blue: #00FFF5;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+/* Navigation bar design*/
+
+.icon img {
+    height: 60px; /* Set the height of the image */
+    width: auto; /* Allow the width to adjust automatically based on the height */   
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure the navbar stays on top of other content */
+}
+
+.navbar{
+    background-color: #189ab4;  /*background color of the navigation bar*/
+    padding: 10px 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+
+.nav_links_container{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav_links{
+    font-weight: 500;              /*font weight of the links*/
+    color: #f5f4f1;    /*color of the links*/
+    margin-left: 35px;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav_links:hover{
+    color: #75e6da;        /*color of the links when hovering*/     
+    background-color: #05445e;   /*background color of the links while hovering*/
+    border-radius: 6px;
+    padding:10px 16px;
+    }
+
+
+.about_nav_link{
+    align-self: center;
+    border-radius: 6px;
+    padding: 10px 16px;
+    color: black;                /*color of the about us link*/
+    background-color: cyan;  /*background color of the about us link*/
+}
+
+.about_nav_link:hover{
+    background-color:black;
+    border: 1px solid #f1f1f0;
+    color:#f3b20f ;
+    
+}
+
+.toggle-button{
+    background-color:#189ab4;
+    margin:15px;
+    position: absolute;
+    top: 15px; /* Adjust top position as needed */
+    right: 210px;
+    
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .nav_links_container {
+        display: none; /* Hide nav links on small screens by default */
+    }
+
+    .about_nav_link {
+        display: block; /* Show about link on small screens */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .nav_links_container {
+        display: none; /* Hide nav links on small screens by default */
+    }
+
+    .show-links {
+        display: flex !important; /* Show nav links when .show-links class is added */
+        flex-direction: column; /* Arrange links vertically */
+        position: absolute; /* Position links relative to navbar */
+        top: 60px; /* Adjust top position to prevent overlap with navbar */
+        left: 0;
+        width: 100%;
+        background-color: #189ab4; /* Match navbar background color */
+        padding: 10px 0;
+    }
+
+    .show-links .nav_links {
+        margin: 15px; /* Add spacing between links */
+        text-align: center; /* Center align links */
+    }
+}
+
+/*Content page design*/
+
+.heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+    padding-top: 90px;
+}
+
+.heading h1{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--blue);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.heading p{
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 35px;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.about-image img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+
+.about-content{
+    flex: 1;
+}
+
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: gray;
+}
+
+.about-content .read-more{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--bg);
+    color: var(--blue);
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+
+.about-content .read-more:hover{
+    background-color: black;
+}
+
+@media screen and (max-width: 768px){
+    .heading{
+        padding: 0px 20px;
+        padding-top: 90px;
+    }
+    .heading h1{
+        font-size: 36px;
+    }
+    .heading p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    .container{
+        padding: 0px;
+    }
+    .about{
+        padding: 20px;
+        flex-direction: column;
+    }
+    .about-image{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .about-content p{
+        padding: 0px;
+        font-size: 16px;
+    }
+    .about-content .read-more{
+        font-size: 16px;
+    }
+}
+
+/* Footer Design Code*/
+
+.foot{
+    display: flex;
+    background-color: var(--bg);
+    justify-content: space-between;
+    padding: 5px 50px;
+}
+
+.foot_text{
+    color: #f5f4f1;
+    padding-top: 23px;
+}
+
+.foot_icons{
+    display:flex;
+}
+
+.foot_icon{
+    margin-top: 23px;
+    margin-left: 10px;
+}
+
+.copyright{
+    display: flex;
+}
+
+.foot a{
+    font-weight: 500;
+}

@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+input{
+    display: none;
+}
+
+/* Navigation bar design*/
+
+.icon img {
+    height: 60px; /* Set the height of the image */
+    width: auto; /* Allow the width to adjust automatically based on the height */   
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;  /* Ensure the navbar stays on top of other content */
+}
+
+.navbar{
+    background-color: #189ab4;  /*background color of the navigation bar*/
+    padding: 10px 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+
+.nav_links_container{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav_links{
+    font-weight: 500;              /*font weight of the links*/
+    color: #f5f4f1;    /*color of the links*/
+    margin-left: 35px;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav_links:hover{
+    color: #75e6da;        /*color of the links when hovering*/     
+    background-color: #05445e;   /*background color of the links while hovering*/
+    border-radius: 6px;
+    padding:10px 16px;
+    }
+
+
+.about_nav_link{
+    align-self: center;
+    border-radius: 6px;
+    padding: 10px 16px;
+    color: black;                /*color of the about us link*/
+    background-color: cyan;  /*background color of the about us link*/
+}
+
+.about_nav_link:hover{
+    background-color:black;
+    border: 1px solid #f1f1f0;
+    color:#f3b20f ;
+    
+}
+
+.toggle-button{
+    background-color:#189ab4;
+    margin:15px;
+    position: absolute;
+    top: 15px; /* Adjust top position as needed */
+    right: 200px;
+    
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .nav_links_container {
+        display: none; /* Hide nav links on small screens by default */
+    }
+
+    .about_nav_link {
+        display: block; /* Show about link on small screens */
+    }
+}
+@media only screen and (max-width: 768px) {
+    .nav_links_container {
+        display: none; /* Hide nav links on small screens by default */
+    }
+
+    .show-links {
+        display: flex !important; /* Show nav links when .show-links class is added */
+        flex-direction: column; /* Arrange links vertically */
+        position: absolute; /* Position links relative to navbar */
+        top: 60px; /* Adjust top position to prevent overlap with navbar */
+        left: 0;
+        width: 100%;
+        background-color: #189ab4; /* Match navbar background color */
+        padding: 10px 0;
+    }
+
+    .show-links .nav_links {
+        margin: 15px; /* Add spacing between links */
+        text-align: center; /* Center align links */
+    }
+}
+
+/* Gallery Design Code*/
+
+.text-container{
+    width: 100%;
+    text-align: center;
+    margin-top: 80px; /* Adjust margin-top to match the height of your navbar */
+}
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 35px;
+    position: relative;
+    margin: 40px 0;
+    padding-top: 40px; /* Adjust the padding-top to match the height of your navbar */
+}
+h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: lightskyblue;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.top-content{
+    background-color: #82CAFF;
+    width: 90%;
+    margin:0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightblue;
+}
+h3{
+    height: 100%;
+    background-color: #89caf8;
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+}
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+label:hover{
+    color: black;
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    background: #ddd;
+}
+.container .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+.container .image-container .image{
+    height: 250px;
+    width: 350px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+.container .image-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.container .image-container .image:hover img{
+    transform: scale(1.1);
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-image {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.popup-image img {
+    max-width: 60%;
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.popup-image .description {
+    max-width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px; /* Padding for spacing */
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.popup-image .description b {
+    font-size: 20px; 
+    color: #000; 
+    margin-bottom: 10px; /* Margin bottom for spacing */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.popup-image .description p {
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.6; /* Adjust line height */
+    color: #585555; /* Text color */
+}
+
+.popup-image .description .select-container {
+    margin-top: 10px; /* Adjust spacing between dropdowns and original description */
+}
+
+/* Styling for dropdown lists */
+.popup-image .description .select-container select {
+    padding: 8px 12px; /* Adjust padding as needed */
+    border: 5px solid #ccc; /* Border color */
+    border-radius: 10px; 
+    font-size: 15px; 
+    cursor: pointer; 
+    outline: none; 
+}
+
+/* Styling for dropdown options */
+.popup-image .description .select-container option {
+    padding: 8px 12px; 
+    font-size: 15px; 
+    cursor: pointer; 
+}
+
+.popup-image span{
+    color: black;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 25px;
+    position: absolute;
+    top: 4px;
+    right: 9px;
+}
+
+/* Footer Design Code*/
+
+.foot{
+    display: flex;
+    background-color: #006666;
+    justify-content: space-between;
+    padding: 5px 50px;
+}
+
+.foot_text{
+    color: #f5f4f1;
+    padding-top: 23px;
+}
+
+.foot_icons{
+    display:flex;
+}
+
+.foot_icon{
+    margin-top: 23px;
+    margin-left: 10px;
+}
+
+.copyright{
+    display: flex;
+}
+
+.foot a{
+    font-weight: 500;
+}
+

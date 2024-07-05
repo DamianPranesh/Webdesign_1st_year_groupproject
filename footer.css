@@ -1,0 +1,28 @@
+.foot{
+    display: flex;
+    background-color: #006666;
+    justify-content: space-between;
+    padding: 5px 50px;
+}
+
+.foot_text{
+    color: #f5f4f1;
+    padding-top: 20px;
+}
+
+.foot_icons{
+    display:flex;
+}
+
+.foot_icon{
+    margin-top: 23px;
+    margin-left: 10px;
+}
+
+.copyright{
+    display: flex;
+}
+
+.foot a{
+    font-weight: 500;
+}

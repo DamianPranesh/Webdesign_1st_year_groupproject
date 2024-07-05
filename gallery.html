@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+             <!--logo-->
+             <div class="icon">
+                 <img src="Images/Logo.jpg" alt="--logo--" style="height: 60px; width: auto;">
+             </div>
+             <button class="toggle-button">&#9776;</button>
+         
+             <!--links in navigation bar-->
+             <div class="nav_links_container">
+                 <!-- linking the home page -->
+                 <a class="nav_links" href="Home Page.html"> Home</a>
+                 
+                 <!-- linking the site map -->
+                 <a class="nav_links" href="sitemap.html"> Site map</a>
+     
+                 <!-- linking the gallery -->
+                 <a class="nav_links" href="gallery.html">Gallery</a>
+     
+                 <!-- linking the feedback form -->
+                 <a class="nav_links" href="Feedback.html">Feedback </a>
+     
+                 <!-- linking the shop -->
+                 <a class="nav_links" href="shop.html">Shop</a>
+                 <a class="nav_links" href="Teampage.html">About Us</a>
+             </div>
+     
+     
+             <!-- linking the about us page -->
+             <a class="nav_links about_nav_link" href="userprofile.html">Volunteer</a>
+         </div>
+        
+     </header>
+    
+    <input type="radio" name="Photos" id="check1" checked>
+    <input type="radio" name="Photos" id="check2">
+    <input type="radio" name="Photos" id="check3">
+    <input type="radio" name="Photos" id="check4">
+
+
+    <div class="text-container">
+        <h1>EDUCATION IMAGE GALLERY</h1>
+        <div class="top-content">
+            <h3>Education Gallery</h3>
+            <label for="check1" onclick="showPhotos('all')">All Photos</label>
+            <label for="check2" onclick="showPhotos('graduation')">Graduation Photos</label>
+            <label for="check3" onclick="showPhotos('students')">Student Photos</label>
+            <label for="check4" onclick="showPhotos('books')">Photos related to books</label>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="image-container">
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book.jpg" alt="Books in a Library">
+                <div class="description">
+                    <b>The first picture out of 8 pictures in the book section</b><br/><br/>
+                    <p>
+                        Behold, a snapshot capturing the essence of a bookshelf nestled within the prestigious walls of The British Library in London, England.
+                        Renowned as one of the world's most esteemed libraries, it stands as a beacon of knowledge and heritage.
+                        Here, amidst its hallowed shelves, visitors delve into a treasure trove of literary marvels spanning centuries.
+                        From the profound insights of Leonardo da Vinci's notebook to the historic significance of the Magna Carta, each artifact offers a window into our collective past, enriching minds and igniting imaginations.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students.jpg" alt="four students enjoying their time in College">
+                <div class="description">
+                    <b>A picture of students in our campus</b><br/><br/>
+                    <p>
+                        Here's a glimpse of few students strolling to class, savoring the moments spent on our partnered campus.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation.jpg" alt="Graduates tossing their caps">
+                <div class="description">
+                    <b>Graduation day on our campus</b><br/><br/>
+                    <p>
+                        A group of graduates tossing their graduation caps for that iconic photo moment!
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book2.jpg" alt="Books stacked on top of each other">
+                <div class="description">
+                    <b>We're onto the next snapshot from the book section, just six more to go!</b><br/><br/>
+                    <p>
+                        Just your typical image capturing a couple of books neatly stacked on top of each other *not really*. 
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students2.jpg" alt="Four students enjoying their time at campus">
+                <div class="description">
+                    <b>Another picture of students in our campus</b><br/><br/>
+                    <p>
+                        Another similar picture to the first picture in the student section.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation2.jpg" alt="Graduations caps being tossed by graduates">
+                <div class="description">
+                    <b>Graduation day on our campus</b><br/><br/>
+                    <p>
+                        Here's another snapshot capturing the moment as all the IT degree graduates toss their caps for that classic photo op!
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book3.jpg" alt="A famous Mona Lisa book">
+                <div class="description">
+                    <b>Here comes another visual treat from the book section - keep 'em coming!</b><br/><br/>
+                    <p>
+                        Introducing 'The History of the World's Most Famous Painting,' a captivating exploration into the life of Mona Lisa. 
+                        While the English version isn't currently in stock, fear not! It'll be hitting our shelves very soon, so stay tuned.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students3.jpg" alt="Three Students enjoying their time at University">
+                <div class="description">
+                    <b>Few more pictures of our students in campus</b><br/><br/>
+                    <p>
+                        Here's an image of three students deep in conversation, 
+                        possibly discussing their studies or just sharing thoughts on life in general.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation3.jpg" alt="A snapshot of Four Graduates">
+                <div class="description">
+                    <b>More pictures of our graduates on Graduation day</b><br/><br/>
+                    <p>
+                        Four individuals celebrating their big day as they graduate together!
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book4.jpg" alt="Two books and a cup of tea">
+                <div class="description">
+                    <b>Moving right along with our journey through the book section, here's the next image!</b><br/><br/>
+                    <p>
+                        A regular image of two people reading their respective books with a cup of tea by their side.<br/>
+                        This is the epitome of serene leisure, the pinnacle of effortless tranquility.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students4.jpg" alt="Three Students working on a project">
+                <div class="description">
+                    <b>MORE PICTURES</b><br/><br/>
+                    <p>
+                        A very similar image to one of our previous pictures.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation4.jpg" alt="A snapshot of a graduate">
+                <div class="description">
+                    <b>More pictures of our graduates on Graduation day</b><br/><br/>
+                    <p>
+                        Celebrating the outstanding achivement of the top graduate on our campus! 
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book5.jpg" alt="snapshot of few books">
+                <div class="description">
+                    <b>And now, we unveil the next masterpiece nestled within the book section - excitement awaits!</b><br/><br/>
+                    <p>
+                        Guess what! We've got another simple image to share with you.<br/>
+                        This one's straight from our book shoot, snapped to be uploaded onto our website.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students5.jpg" alt="A snapshot of students in a classroom">
+                <div class="description">
+                    <b>Our Classroom</b><br/><br/>
+                    <p>
+                        Here's a picture snapped inside one of our classrooms, filled with lively young students.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation5.jpg" alt="A snapshot of a group of graduates">
+                <div class="description">
+                    <b>More pictures of our graduates on Graduation day</b><br/><br/>
+                    <p>
+                        Picture this: the graduates gathering in line on their big day, just moments before the ceremony begins! 
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book6.jpg" alt="A picture of Jane Austen's books">
+                <div class="description">
+                    <b>Buckle up, folks! We're cruising through the book section, and here's the next snapshot!</b><br/><br/>
+                    <p>
+                        The author behind these literary gems is none other than Jane Austen.<br/>
+                        Books such as Mansfield Park, Emma, Pride and Prejudice, Northanger Abbey, Sense and Sensibility, Persuasion and many more , all coming soon to our store shelves!  
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students6.jpg" alt="Another group of students enjoying their time at campus">
+                <div class="description">
+                    <b>MORE PICTURES</b><br/><br/>
+                    <p>
+                        Take a peek at this other picture featuring our students lounging around our campus, soaking up the moment!
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation6.jpg" alt="A snapshot of a rolled-up graduation certificate">
+                <div class="description">
+                    <b>More pictures of our graduates on Graduation day</b><br/><br/>
+                    <p>
+                        Here's a close-up shot capturing the iconic rolled-up certificate! 
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book7.jpg" alt="A picture of religious books">
+                <div class="description">
+                    <b>Without further ado, presenting the next enchanting image from the book section!</b><br/><br/>
+                    <p>
+                        Here's a sneak peek at some religious books that will soon grace our store shelves!
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students7.jpg" alt="A snapshot of students enjoying their times at one of their friend's dorms">
+                <div class="description">
+                    <b>MORE PICTURES</b><br/><br/>
+                    <p>
+                        Check out these young adults gathering in one of their dorm rooms on our campus, having a great time together!
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation7.jpg" alt="Graduation hats of these young graduates">
+                <div class="description">
+                    <b>More pictures of our graduates on Graduation day</b><br/><br/>
+                    <p>
+                        Here's a close-up shot capturing the iconic Graduation hats! 
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image books" onclick="enlargeImage(this)">
+                <img src="Images/book8.jpg" alt="A beautiful Library">
+                <div class="description">
+                    <b>Here's the next glimpse into the captivating world of books from our collection of eight.</b><br/><br/>
+                    <p>
+                        Check out this stunning picture of a library nestled in Italy! 
+                        The Biblioteca Nazionale Centrale is truly one of the world's greatest treasures. 
+                        Established in 1747 as the Biblioteca Magliabechiana, it remains Italy's largest library to this day, boasting an impressive collection of over six million volumes.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image students" onclick="enlargeImage(this)">
+                <img src="Images/Students8.jpg" alt="A snapshot of students focusing on their lectures">
+                <div class="description">
+                    <b>MORE PICTURES</b><br/><br/>
+                    <p>
+                        Take a glimpse at students attentively listening to a lecture in one of our auditoriums.
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="image graduation" onclick="enlargeImage(this)">
+                <img src="Images/Graduation8.jpg" alt="Graduation after party">
+                <div class="description">
+                    <b>More pictures of our graduates on Graduation day</b><br/><br/>
+                    <p>
+                        Check out the post-graduation party in full swing after the ceremony! 
+                    </p>
+                    <div class="select-container">
+                        <select onchange="changeBackgroundColor(this.value)">
+                            <option value="">Background Color</option>
+                            <option value="rgba(128,128,128,0.8)">Grey</option>
+                            <option value="rgba(0,0,255,0.3)">Blue</option>
+                            <option value="rgba(255,0,0,0.3)">Red</option>
+                            <option value="rgba(255,255,0,0.3)">Yellow</option>
+                            <option value="rgba(0,255,0,0.3)">Green</option>
+                        </select>
+
+                        <select onchange="changeFontFamily(this.value)">
+                            <option value="">Font Family</option>
+                            <option value="Tahoma, sans-serif">Tahoma</option>
+                            <option value="Georgia, serif">Georgia</option>
+                            <option value="Verdana, sans-serif">Verdana</option>
+                            <option value="Courier New, monospace">Courier New</option>
+                            <option value="Lucida Sans Unicode, sans-serif">Lucida Sans</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="popup-container">
+            <div class="popup-image">
+                <span onclick="closePopup()">X</span>
+                <img src="enlarge.jpg" alt="When the image enlarges">
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <!--footer-->
+        <hr>
+        <div class="foot">
+            <div class="foot_icons">
+                <a href="https://www.instagram.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z" fill="rgb(255,255,255)"/></svg></a>
+                <a href="https://www.facebook.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="rgb(255,255,255)"/></svg></a>
+                <a href="https://www.pinterest.com"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.37 2.094A10.003 10.003 0 0 0 8.002 21.17a7.757 7.757 0 0 1 .163-2.293c.185-.839 1.296-5.463 1.296-5.463a3.739 3.739 0 0 1-.324-1.577c0-1.485.857-2.593 1.923-2.593a1.334 1.334 0 0 1 1.342 1.508c0 .9-.578 2.262-.88 3.54a1.544 1.544 0 0 0 1.575 1.923c1.898 0 3.17-2.431 3.17-5.301 0-2.2-1.457-3.848-4.143-3.848a4.746 4.746 0 0 0-4.93 4.794 2.96 2.96 0 0 0 .648 1.97.48.48 0 0 1 .162.554c-.046.184-.162.623-.208.784a.354.354 0 0 1-.51.254c-1.384-.554-2.036-2.077-2.036-3.816 0-2.847 2.384-6.255 7.154-6.255 3.796 0 6.32 2.777 6.32 5.747 0 3.909-2.177 6.848-5.394 6.848a2.861 2.861 0 0 1-2.454-1.246s-.578 2.316-.692 2.754a8.026 8.026 0 0 1-1.019 2.131c.923.28 1.882.42 2.846.416a9.988 9.988 0 0 0 9.996-10.003 10.002 10.002 0 0 0-8.635-9.903z" fill="rgb(255,255,255)"/></svg></a>
+                <a href="https://twitter.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgb(255,255,255)"/></svg></a>
+            </div>
+            
+            <div class="copyright">
+                <svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 3c1.82 0 3.413.973 4.288 2.428l-1.714 1.029A3 3 0 1 0 12 15a2.998 2.998 0 0 0 2.573-1.456l1.715 1.028A4.999 4.999 0 0 1 7 12c0-2.76 2.24-5 5-5z" fill="rgb(255,255,255)"/></svg>
+                <p class= "foot_text">2024 Edu Pro. All rights reserved.</p>
+            </div>
+        </div>
+       
+    </footer>
+
+    <script src="gallery.js"></script>
+
+</body>
+</html>
